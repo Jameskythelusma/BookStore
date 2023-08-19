@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+ <div></div>   
+ <h1>Liste des livres</h1>
+ {% for Book in Book_list %}
+    <h2>{{Book.title}}</h2>
+    <p>{{Book.author}}</p>
+    <p>{{Book.publication_year}}</p>
+    <p>{{Book.id}}</p>
+    <ul>
+        <a href="{% url 'bookdetail' Book.id %}">plis detay</a><br>
+        <a href="">note fim sa</a>
+    </ul>
+   
+
+
+    <hr>
+ {% endfor %}
+</div>  
+</body>
+</html>
